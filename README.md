@@ -5,7 +5,6 @@ Girl Develop It Boulder's site which contains class materials and examples. As w
 
 To Do List:
 ===========
-* change asset locations to be served from root /
 * write documentation about how to extend the site
 
 Notes for docs:

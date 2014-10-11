@@ -34,7 +34,7 @@ This site is developed using the ECT javascript templating engine.  Here is what
     <script type="text/javascript" src="/script/page/example.js"></script>
     ```
 
-5. Edit your new ect file. The ect file replaces the body without modifying the header or footer. You do not need add <body> tags.
+5. Edit your new ect file. The ect file replaces the body without modifying the header or footer. You do not need add `<body>` tags.
 
 Development Notes
 -----------------

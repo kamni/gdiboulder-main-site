@@ -1,5 +1,4 @@
 gdiMatIndex = {
-  jsExtras: ["script/jquery.bpopup.min.js"],
   header: "GDI Boulder Materials",
   template: "pages/index.ect",
   baseModuleUrl: "http://gdiboulder.github.io/",

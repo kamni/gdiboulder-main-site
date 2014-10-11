@@ -30,8 +30,8 @@
 
     <div class="clear"></div>
 
-    <div id="module-modal" style="height: 600px; width:800px">
-      <iframe style="height: 600px; width: 800px" id="module-content" frameborder="0", marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <div id="module-modal">
+      <iframe id="module-content" frameborder="0", marginwidth="0" marginheight="0" allowfullscreen></iframe>
     </div>
 
   </div><!-- end .chapter-header -->
@@ -44,9 +44,13 @@ $(function () {
     var dialog = $("#module-modal").dialog({
         autoOpen: false,
         modal: true,
-        resizable: false,
-        width: "auto",
+        resizable: true,
+        /*minHeight: $(window).innerHeight(),
+        minWidth: $(window).innerWidth(),*/
+        /*maxHeight: $(window).innerHeight(),
+        maxWidth: $(window).innerWidth(),*/
         height: "auto",
+        width: "quto",
         close: function () {
             iframe.attr("src", "");
             overlay.hide();
@@ -58,7 +62,8 @@ $(function () {
         var title = $(this).attr("data-title");
         iframe.attr({
           src: src,
-          height: $(window).innerHeight()
+          height: $(window).innerHeight() * .85,
+          width: $(window).innerWidth() * .85
         });
         overlay.show();
         dialog.dialog("option", "title", title).dialog("open").dialog( "moveToTop" );

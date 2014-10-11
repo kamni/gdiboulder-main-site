@@ -7,7 +7,7 @@ gdiMatIndex = {
   baseModuleUrl: "http://gdiboulder.github.io/",
   modules: [
     { title: "Introduction to HTML & CSS", url: "gdi-boulder-intro-html-css" },
-    { title: "Intermediate HTML & CSS", url: "gdi-boulder-intermediate-html-css" },
+    { title: "Intermediate HTML & CSS", url: "gdi-boulder-intermediate-htmlcss" },
     { title: "Introduction to Javascript", url: "gdi-intro-javascript" },
     { title: "Introduction to Programming Concepts", url: "gdi-boulder-intro-programming-concepts" },
     { title: "Introduction to Bootstrap 3", url: "gdi-boulder-intro-bootstrap" },

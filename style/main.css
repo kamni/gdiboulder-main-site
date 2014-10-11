@@ -1,15 +1,5 @@
-@font-face {
-  font-family: "Gotham";
-  src: local("Gotham"), url("fonts/Gotham/Gotham-Medium.otf") format("opentype"); }
-
-@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Pacifico Regular"), local("Pacifico-Regular"), url("fonts/Pacifico/Pacifico.woff") format("woff"); }
-
 body {
-  font: 100% "Gotham", sans-serif;
+  font: 100% Verdana, Geneva, sans-serif;
   width: 100%;
   padding: 0;
   margin: 0; }

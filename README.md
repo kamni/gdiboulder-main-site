@@ -7,6 +7,7 @@ To Do List:
 ===========
 * redo class names for divs
 * redo css with SASS? semantic class names?
+* remove tmp.html, chapters*.css, main-*.css
 * go through 'assets' and figure out what can be gotten rid of
 * change asset locations to be served from root /
 * write documentation about how to extend the site

@@ -1,8 +1,8 @@
-<div class="chapter-profile">
-  <div class="chapter-title"><%= @header %></div>
+<div class="content">
+  <div class="content-title"><%= @header %></div>
 
-  <div class="chapter-header">
-    <div class="chapter-skyline">
+  <div class="content-wrapper">
+    <div class="main">
       <% if @modules?.length : %>
       <ul>
         <% for link in @modules : %>
@@ -13,7 +13,7 @@
       <% end %>
     </div>
 
-    <div class="chapter-logo">
+    <div class="chapter-info">
       <img alt="GDI Boulder Logo" src="image/boulder-stamp.png">
 
       <div class="chapter-socials">

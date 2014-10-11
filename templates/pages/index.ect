@@ -6,7 +6,7 @@
       <% if @modules?.length : %>
       <ul>
         <% for link in @modules : %>
-        <li class="module"><a href="<%- @baseModuleUrl %><%- link.url %>"><%- link.title %></a></li>
+        <li class="module"><a data-href="<%- @baseModuleUrl %><%- link.url %>"><%- link.title %></a></li>
         <% end %>
       </ul>
       <% else : %>
@@ -35,7 +35,7 @@
 <script type="text/javascript">
 $(function () {
     var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>');
-    var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
+    /*var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
         autoOpen: false,
         modal: true,
         resizable: false,
@@ -44,19 +44,20 @@ $(function () {
         close: function () {
             iframe.attr("src", "");
         }
-    });
+    });*/
     $(".module a").on("click", function (e) {
-        e.preventDefault();
+        /*e.preventDefault();
         var src = $(this).attr("href");
-        /*var title = $(this).attr("data-title");
+        var title = $(this).attr("data-title");
         var width = $(this).attr("data-width");
-        var height = $(this).attr("data-height");*/
+        var height = $(this).attr("data-height");
         iframe.attr({
-            /*width: +width,
-            height: +height,*/
+            width: +width,
+            height: +height,
             src: src
         });
-        dialog.dialog("option", "title", title).dialog("open");
+        dialog.dialog("option", "title", title).dialog("open");*/
+        alert($(this).attr("data-href"));
     });
 });
 </script>

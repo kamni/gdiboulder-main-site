@@ -35,7 +35,8 @@ h3 {
 a {
   color: #01a9b4;
   text-decoration: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
 
 a:hover {
   color: #222222; }
@@ -92,17 +93,17 @@ a:hover {
       color: #01a9b4;
       border-bottom: 2px solid #222222; }
 
-ul {
+ul.float {
   list-style: none;
   padding: 0px; }
-  ul li {
+  ul.float li {
     float: left;
     margin-right: 10px; }
 
-ul.no-float {
+ul {
   list-style: square;
   padding: 2px; }
-  ul.no-float li {
+  ul li {
     float: none;
     padding: 2px; }
 
@@ -114,6 +115,9 @@ img {
   padding: 10px;
   font-weight: normal;
   margin: 0 auto; }
+  #body-content ul li {
+    list-style: none;
+  }
 
 .footerContainer {
   width: 100%;

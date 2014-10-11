@@ -11,29 +11,24 @@ This site is developed using the ECT javascript templating engine.  Here is what
 1. Copy index.html and rename it to your new page name (`example.html`).
 2. Create a new template in `/templates/pages` with the same name (`example.ect`)
 3. Create a `/script/page` javascript file with the same name (`example.js`). The file should contain at a minimum:
-
-```javascript
-gdiExampl = {
-  template: "pages/example.ect",
-  // add any other variables that you want available to your template
-}
-```
-
+    ```javascript
+    gdiExample = {
+      template: "pages/example.ect",
+      // add any other variables that you want available to your template
+    }
+    ```
 4. Look for the following lines in your html file and modify them:
-
-```
-<!-- modify the following lines for other pages -->
-<title>GDI Boulder Materials</title>
-<script type="text/javascript" src="/script/page/index.js"></script>
-<!-- end modification -->
-```
-
-```
-<!-- Example modification -->
-<title>GDI Example</title>
-<script type="text/javascript" src="/script/page/example.js"></script>
-```
-
+    ```
+    <!-- modify the following lines for other pages -->
+    <title>GDI Boulder Materials</title>
+    <script type="text/javascript" src="/script/page/index.js"></script>
+    <!-- end modification -->
+    ```
+    ```
+    <!-- Example modification -->
+    <title>GDI Example</title>
+    <script type="text/javascript" src="/script/page/example.js"></script>
+    ```
 5. Edit your new ect file. The ect file replaces the body without modifying the header or footer. You do not need add <body> tags.
 
 Development Notes

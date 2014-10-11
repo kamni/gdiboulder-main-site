@@ -1,0 +1,186 @@
+body {
+  font: 100% Verdana, Geneva, sans-serif;
+  color: #222;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+
+header {
+  clear: both;
+  width: 100%; }
+  header .socials {
+    float: left;
+    position: absolute;
+    top: 40px; }
+  header .top-bar {
+    background-color: #222;
+    height: 6px; }
+
+h3 {
+  font-size: 110%;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  text-transform: uppercase; }
+
+img {
+  border: none; }
+
+a {
+  color: #01a9b4;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+a:hover {
+  color: #222; }
+
+ul {
+  list-style: square;
+  padding: 2px; }
+  ul.float {
+    list-style: none;
+    padding: 0px; }
+    ul.float li {
+      float: left;
+      margin-right: 10px; }
+  ul li {
+    float: none;
+    padding: 2px; }
+
+#body-content {
+  width: 85%;
+  padding: 10px;
+  font-weight: normal;
+  margin: 0 auto; }
+  #body-content ul li {
+    list-style: none; }
+
+#logo {
+  float: left;
+  width: 25%;
+  max-width: 250px; }
+
+#menu ul {
+  float: right;
+  width: 70%; }
+  #menu ul li {
+    float: right;
+    text-transform: uppercase;
+    list-style: none; }
+    #menu ul li a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #f05b62;
+      border-bottom: 2px solid white; }
+      #menu ul li a:hover {
+        color: #01a9b4;
+        border-bottom: 2px solid #222; }
+  #menu ul .menu ul {
+    margin: 0px;
+    padding: 0px; }
+    #menu ul .menu ul li {
+      padding: 0px;
+      margin: 0px 9px 0px 0px;
+      list-style: none;
+      float: right; }
+      #menu ul .menu ul li:last-child {
+        margin-right: 0px; }
+      #menu ul .menu ul li.selected a {
+        font-weight: bold; }
+
+.footer-container {
+  width: 100%;
+  color: black; }
+  .footer-container .about {
+    padding: 5px;
+    font-size: 90%;
+    background: #222;
+    text-align: center; }
+    .footer-container .about a {
+      padding: 0 10px; }
+      .footer-container .about a:hover {
+        color: white; }
+
+.media-container {
+  width: 100%;
+  height: 50px;
+  background-color: #fff; }
+  .media-container .media-div {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center; }
+    .media-container .media-div .media {
+      height: 25px;
+      padding-top: 10px;
+      padding-left: 25px; }
+
+.clear {
+  clear: both; }
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center; }
+  .content .content-title {
+    text-align: left;
+    width: 100%;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 1%;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1%; }
+  .content .content-wrapper {
+    margin: 5% auto 0 auto;
+    text-align: left; }
+    .content .content-wrapper .chapter-info {
+      text-align: right;
+      width: 50%;
+      min-width: 100px;
+      float: right; }
+      .content .content-wrapper .chapter-info img {
+        width: 30%;
+        border-radius: 10px;
+        -moz-border-radius: 10px; }
+      .content .content-wrapper .chapter-info .chapter-socials img {
+        width: 20px; }
+    .content .content-wrapper .main {
+      float: left;
+      width: 40%; }
+      .content .content-wrapper .main img {
+        width: 100%;
+        border-radius: 10px;
+        -moz-border-radius: 10px; }
+      .content .content-wrapper .main ul li:nth-child(5n-4) a {
+        color: #f05b62; }
+      .content .content-wrapper .main ul li:nth-child(5n-3) a {
+        color: #01a9b4; }
+      .content .content-wrapper .main ul li:nth-child(5n-2) a {
+        color: #92bb44; }
+      .content .content-wrapper .main ul li:nth-child(5n-1) a {
+        color: #edab23; }
+      .content .content-wrapper .main ul li:nth-child(5n) a {
+        color: #8b0036; }
+      .content .content-wrapper .main ul li a:hover {
+        color: #222; }
+
+.header {
+  padding: 10px 15px; }
+
+#page, .header, .footer {
+  max-width: 1200px;
+  min-width: 480px;
+  margin: 0px auto; }
+
+article, nav, header, footer, aside, hgroup, section {
+  display: block; }
+
+/*# sourceMappingURL=main.css.map */

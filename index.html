@@ -1,21 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>GDI Boulder Materials</title>
-		<link rel="stylesheet" href="styles.css">
-	</head>
-	<body>
-		<h1>GDI Boulder Materials</h1>
-		<h2><a href="https://github.com/etmoore/gdi-git-workshop">Introduction Git &amp; GitHub</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-intro-html-css/#/">Introduction to HTML &amp; CSS</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss/#/">Intermediate HTML &amp; CSS</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-intro-javascript/#/">Introduction to Javascript</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-intro-programming-concepts/#/">Introduction to Programming Concepts</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap/#/">Introduction to Bootstrap 3</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-advanced-css-techniques">Advanced CSS Tips &amp; Techniques</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-css3-properties/#/">CSS3 Properties &amp; Selectors</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-boulder-servers-intro/#/">Introduction to Servers</a></h2>
-		<h2><a href="http://gdiboulder.github.io/gdi-intro-python/#/">Introduciton to Python</a></h2>
-		<h2><a href="http://bit.ly/clgdi">Introduction to Command Line</a></h2>
-	</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Learn to Program, Software Development, Women Entrepreneurs, Technology Education, Women in Business, Web Development, Mobile Development, Women Programmers">
+    <meta name="description" content="Girl Develop It is an international organization, certified by the Board of Education, that exists to provide affordable and accessible programs to women who want to learn software development through mentorship and hands-on instruction.">
+
+    <!-- needed for all pages -->
+    <script type="text/javascript" src="/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/script/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/script/coffee-script.js"></script>
+    <script type="text/javascript" src="/script/ect.min.js"></script>
+    <script type="text/javascript" src="/script/page/base.js"></script>
+    <link type="text/css" href="/style/jquery-ui.css" media="screen" rel="stylesheet">
+    <link type="text/css" href="style/main.css" media="screen" rel="stylesheet">
+
+    <!-- modify the following lines for other pages -->
+    <title>GDI Boulder Materials</title>
+    <script type="text/javascript" src="/script/page/index.js"></script>
+    <!-- end modification -->
+
+    <script type="text/javascript">
+      renderer = ECT({ root : '/templates' });
+      var script = renderer.render('includes/script.ect', gdiMatIndex);
+      document.write(script);
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var html = renderer.render('base.ect', gdiMatIndex);
+      document.write(html)
+    </script>
+  </body>
 </html>

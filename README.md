@@ -5,7 +5,8 @@ Girl Develop It Boulder's site which contains class materials and examples. As w
 
 To Do List:
 ===========
-* redo css with SASS
+* redo class names for divs
+* redo css with SASS? semantic class names?
 * go through 'assets' and figure out what can be gotten rid of
 * change asset locations to be served from root /
 * write documentation about how to extend the site

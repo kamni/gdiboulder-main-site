@@ -1,0 +1,68 @@
+<div class="content">
+  <div class="content-title"><%= @header %></div>
+
+  <div class="content-wrapper">
+    <div class="main">
+      <% if @modules?.length : %>
+      <ul>
+        <% for link in @modules : %>
+        <li class="module"><a data-href="<%- @baseModuleUrl %><%- link.url %>" data-title="<%= link.title %>"><%= link.title %></a></li>
+        <% end %>
+      </ul>
+      <% else : %>
+      <% end %>
+    </div>
+
+    <div class="chapter-info">
+      <img alt="GDI Boulder Logo" src="/image/boulder-stamp.png">
+
+      <div class="chapter-socials">
+        <% if @contactInfo?.length : %>
+        <% for link in @contactInfo : %>
+        <div class="<%- link.class %>">
+          <% if link.icon? : %><img alt="<%= link.class %> icon" src="<%- link.icon %>"><% end %>
+          <a href="<%- link.url %>" alt="<%= @contactAltPrefix %> <%= link.alt %>" target="_blank"><%= link.title %></a>
+        </div>
+        <% end %>
+        <% end %>
+      </div><!-- end .chapter-socials -->
+    </div><!-- end .chapter-info -->
+
+    <div class="clear"></div>
+
+    <div id="module-modal">
+      <iframe id="module-content" frameborder="0", marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+
+  </div><!-- end .content-wrapper -->
+</div><!-- end .content -->
+
+<script type="text/javascript">
+$(function () {
+    var iframe = $("#module-content");
+    var overlay = $(".fade");
+    var dialog = $("#module-modal").dialog({
+        autoOpen: false,
+        modal: true,
+        resizable: true,
+        height: "auto",
+        width: "quto",
+        close: function () {
+            iframe.attr("src", "");
+            overlay.hide();
+        }
+    });
+    $(".module a").on("click", function (e) {
+        e.preventDefault();
+        var src = $(this).attr("data-href");
+        var title = $(this).attr("data-title");
+        iframe.attr({
+          src: src,
+          height: $(window).innerHeight() * .85,
+          width: $(window).innerWidth() * .85
+        });
+        overlay.show();
+        dialog.dialog("option", "title", title).dialog("open");
+    });
+});
+</script>

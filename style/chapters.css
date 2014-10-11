@@ -102,3 +102,20 @@
               background: #222222; }
               .chapter-profile .chapter-content .chapter-about .classes .month .listing .class-info .class-rsvp a:hover {
                 color: white; }
+.chapter-skyline ul li:nth-child(5n-4) a {
+  color: #f05b62;  /* pink */
+}
+.chapter-skyline ul li:nth-child(5n-3) a {
+  color: #01a9b4;  /* blue */
+}
+.chapter-skyline ul li:nth-child(5n-2) a {
+  color: #92bb44; /* green */
+}
+.chapter-skyline ul li:nth-child(5n-1) a {
+  color: #edab23; /* yellow */
+}
+.chapter-skyline ul li:nth-child(5n) a {
+  color: #8b0036;  /* red */
+}
+
+/* colorClasses: ["pink", "blue", "green", "yellow", "red"], */

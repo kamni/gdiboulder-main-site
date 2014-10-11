@@ -1,6 +1,4 @@
 gdiMatIndex = {
-  title: "GDI Boulder Materials",
-  colorClasses: ["pink", "blue", "green", "yellow", "red"],
   jsExtras: ["script/jquery.bpopup.min.js"],
   header: "GDI Boulder Materials",
   template: "pages/index.ect",

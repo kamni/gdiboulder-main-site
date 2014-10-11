@@ -45,10 +45,6 @@ $(function () {
         autoOpen: false,
         modal: true,
         resizable: true,
-        /*minHeight: $(window).innerHeight(),
-        minWidth: $(window).innerWidth(),*/
-        /*maxHeight: $(window).innerHeight(),
-        maxWidth: $(window).innerWidth(),*/
         height: "auto",
         width: "quto",
         close: function () {
@@ -66,7 +62,7 @@ $(function () {
           width: $(window).innerWidth() * .85
         });
         overlay.show();
-        dialog.dialog("option", "title", title).dialog("open").dialog( "moveToTop" );
+        dialog.dialog("option", "title", title).dialog("open");
     });
 });
 </script>

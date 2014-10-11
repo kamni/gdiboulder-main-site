@@ -1,0 +1,5 @@
+<% if @jsExtras?.length : %>
+<% for js in @jsExtras : %>
+<script type="text/javascript" src="<%- js %>"></script>
+<% end %>
+<% end %>

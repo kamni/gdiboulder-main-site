@@ -1,0 +1,104 @@
+#meetup_id {
+  display: none; }
+
+.chapter-profile {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center; }
+  .chapter-profile .chapter-title {
+    text-align: left;
+    width: 100%;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 1%;
+    border-bottom: 1px solid #222222;
+    margin-bottom: 1%; }
+  .chapter-profile .chapter-header {
+    margin: 0 auto;
+    text-align: left; }
+    .chapter-profile .chapter-header .chapter-logo {
+      text-align: right;
+      width: 50%;
+      min-width: 100px;
+      float: right; }
+      .chapter-profile .chapter-header .chapter-logo img {
+        width: 30%;
+        border-radius: 10px;
+        -moz-border-radius: 10px; }
+    .chapter-profile .chapter-header .chapter-skyline {
+      float: left;
+      width: 40%; }
+      .chapter-profile .chapter-header .chapter-skyline img {
+        width: 100%;
+        border-radius: 10px;
+        -moz-border-radius: 10px; }
+    .chapter-profile .chapter-header .chapter-socials img {
+      width: 20px; }
+  .chapter-profile .chapter-content {
+    text-align: left;
+    margin-top: 5%; }
+    .chapter-profile .chapter-content .chapter-bios {
+      float: left;
+      width: 55%; }
+      .chapter-profile .chapter-content .chapter-bios .people {
+        border-top: #01a9b4 2px solid;
+        padding-bottom: 10%;
+        clear: both; }
+        .chapter-profile .chapter-content .chapter-bios .people .person {
+          margin-bottom: 3%;
+          clear: both; }
+          .chapter-profile .chapter-content .chapter-bios .people .person .name {
+            font-size: 120%; }
+          .chapter-profile .chapter-content .chapter-bios .people .person .profile-pic {
+            width: 35%;
+            min-width: 150px;
+            float: left;
+            padding: 2% 2% 2% 0; }
+            .chapter-profile .chapter-content .chapter-bios .people .person .profile-pic img {
+              width: 100%;
+              border-radius: 10px;
+              -moz-border-radius: 10px; }
+          .chapter-profile .chapter-content .chapter-bios .people .person .bio {
+            font-size: 90%;
+            line-height: 140%; }
+          .chapter-profile .chapter-content .chapter-bios .people .person .contact {
+            clear: both;
+            font-style: italic;
+            font-size: 90%; }
+            .chapter-profile .chapter-content .chapter-bios .people .person .contact h4 {
+              margin: .5em 0; }
+    .chapter-profile .chapter-content .chapter-about {
+      width: 35%;
+      float: left;
+      margin-left: 10%;
+      min-width: 195px; }
+      .chapter-profile .chapter-content .chapter-about .announcements {
+        border-top: #edab23 2px solid;
+        padding-bottom: 10%; }
+      .chapter-profile .chapter-content .chapter-about .sponsors {
+        border-top: #92bb44 2px solid;
+        padding-bottom: 10%; }
+        .chapter-profile .chapter-content .chapter-about .sponsors .sponsor {
+          width: 45%;
+          padding-right: 3%;
+          margin: 5% 0; }
+          .chapter-profile .chapter-content .chapter-about .sponsors .sponsor img {
+            width: 100%;
+            margin: 5% 0; }
+      .chapter-profile .chapter-content .chapter-about .classes {
+        border-top: #f05b62 2px solid;
+        padding-bottom: 10%; }
+        .chapter-profile .chapter-content .chapter-about .classes .month {
+          padding-bottom: 5%; }
+          .chapter-profile .chapter-content .chapter-about .classes .month .month-name {
+            font-weight: bold; }
+          .chapter-profile .chapter-content .chapter-about .classes .month .listing {
+            clear: both;
+            padding: 2%; }
+            .chapter-profile .chapter-content .chapter-about .classes .month .listing .class-info .class-rsvp {
+              float: right;
+              padding: 2%;
+              background: #222222; }
+              .chapter-profile .chapter-content .chapter-about .classes .month .listing .class-info .class-rsvp a:hover {
+                color: white; }

@@ -1,0 +1,62 @@
+<div class="chapter-profile">
+  <div class="chapter-title"><%= @header %></div>
+
+  <div class="chapter-header">
+    <div class="chapter-skyline">
+      <% if @modules?.length : %>
+      <ul>
+        <% for link in @modules : %>
+        <li class="module"><a href="<%- @baseModuleUrl %><%- link.url %>"><%- link.title %></a></li>
+        <% end %>
+      </ul>
+      <% else : %>
+      <% end %>
+    </div>
+
+    <div class="chapter-logo">
+      <img alt="GDI Boulder Logo" src="image/boulder-stamp.png">
+
+      <div class="chapter-socials">
+        <% if @contactInfo?.length : %>
+        <% for link in @contactInfo : %>
+        <div class="<%- link.class %>">
+          <% if link.icon? : %><img alt="<%= link.class %> icon" src="<%- link.icon %>"><% end %>
+          <a href="<%- link.url %>" alt="<%= @contactAltPrefix %> <%= link.alt %>" target="_blank"><%= link.title %></a>
+        </div>
+        <% end %>
+        <% end %>
+      </div><!-- end .chapter-socials -->
+    </div><!-- end .chapter-logo -->
+
+    <div class="clear"></div>
+  </div><!-- end .chapter-header -->
+</div><!-- end .chapter-profile -->
+
+<script type="text/javascript">
+$(function () {
+    var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>');
+    var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
+        autoOpen: false,
+        modal: true,
+        resizable: false,
+        width: "auto",
+        height: "auto",
+        close: function () {
+            iframe.attr("src", "");
+        }
+    });
+    $(".module a").on("click", function (e) {
+        e.preventDefault();
+        var src = $(this).attr("href");
+        /*var title = $(this).attr("data-title");
+        var width = $(this).attr("data-width");
+        var height = $(this).attr("data-height");*/
+        iframe.attr({
+            /*width: +width,
+            height: +height,*/
+            src: src
+        });
+        dialog.dialog("option", "title", title).dialog("open");
+    });
+});
+</script>

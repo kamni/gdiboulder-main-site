@@ -6,6 +6,8 @@ Girl Develop It Boulder's site which contains class materials and examples. As w
 To Do List:
 ===========
 * get modal working
+* styling -- allow modal to be smaller, fix button styling
+* go through github links and make sure they all work
 * change asset locations to be served from root /
 * fix missing CSS fonts
 * redo css with SASS

@@ -6,7 +6,7 @@
       <% if @modules?.length : %>
       <ul>
         <% for link in @modules : %>
-        <li class="module"><a data-href="<%- @baseModuleUrl %><%- link.url %>"><%- link.title %></a></li>
+        <li class="module"><a data-href="<%- @baseModuleUrl %><%- link.url %>" data-title="<%= link.title %>"><%= link.title %></a></li>
         <% end %>
       </ul>
       <% else : %>
@@ -29,13 +29,19 @@
     </div><!-- end .chapter-logo -->
 
     <div class="clear"></div>
+
+    <div id="module-modal" style="height: 600px; width:800px">
+      <iframe style="height: 600px; width: 800px" id="module-content" frameborder="0", marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+
   </div><!-- end .chapter-header -->
 </div><!-- end .chapter-profile -->
 
 <script type="text/javascript">
 $(function () {
-    var iframe = $('<iframe frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>');
-    /*var dialog = $("<div></div>").append(iframe).appendTo("body").dialog({
+    var iframe = $("#module-content");
+    var overlay = $(".fade");
+    var dialog = $("#module-modal").dialog({
         autoOpen: false,
         modal: true,
         resizable: false,
@@ -43,21 +49,19 @@ $(function () {
         height: "auto",
         close: function () {
             iframe.attr("src", "");
+            overlay.hide();
         }
-    });*/
+    });
     $(".module a").on("click", function (e) {
-        /*e.preventDefault();
-        var src = $(this).attr("href");
+        e.preventDefault();
+        var src = $(this).attr("data-href");
         var title = $(this).attr("data-title");
-        var width = $(this).attr("data-width");
-        var height = $(this).attr("data-height");
         iframe.attr({
-            width: +width,
-            height: +height,
-            src: src
+          src: src,
+          height: $(window).innerHeight()
         });
-        dialog.dialog("option", "title", title).dialog("open");*/
-        alert($(this).attr("data-href"));
+        overlay.show();
+        dialog.dialog("option", "title", title).dialog("open").dialog( "moveToTop" );
     });
 });
 </script>

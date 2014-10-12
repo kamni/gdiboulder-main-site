@@ -1,0 +1,152 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Learn to Program, Software Development, Women Entrepreneurs, Technology Education, Women in Business, Web Development, Mobile Development, Women Programmers">
+    <meta name="description" content="Girl Develop It is an international organization, certified by the Board of Education, that exists to provide affordable and accessible programs to women who want to learn software development through mentorship and hands-on instruction.">
+
+    <!-- needed for all pages -->
+    <script type="text/javascript" src="/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/script/jquery-ui.min.js"></script>
+    <link type="text/css" href="/style/jquery-ui.css" media="screen" rel="stylesheet">
+    <link type="text/css" href="style/main.css" media="screen" rel="stylesheet">
+
+    <!-- modify the following lines for other pages -->
+    <title>GDI Boulder Materials</title>
+    <!-- end modification -->
+  </head>
+
+  <body>
+    <header>
+      <div class="top-bar"></div>
+
+      <ul class="socials">
+        <li><a href="http://www.twitter.com/gdiboulder" alt="GDI Boulder on Twitter" target="_blank"><img alt="Twitter" src="/image/twitter.png"></a></li>
+        <li><a href="http://www.facebook.com/gdiboulder" alt="GDI Boulder on  Facebook" target="_blank"><img alt="Facebook" src="/image/facebook.png"></a></li>
+      </ul>
+
+      <div class="header">
+        <a href="http://girldevelopit.com/"><img alt="Girl Develop It" id="logo" src="/image/pink-logo.png"></a>
+        <span id="menu" class="menu">
+          <nav class="menu">
+            <ul>
+                <li><a href="http://girldevelopit.com/" alt="Parent Org">Parent Org</a></li>
+              <li><a href="http://www.meetup.com/Girl-Develop-It-Boulder" alt="Meetup">Meetup</a></li>
+              <li><a href="http://girldevelopit.com/chapters/boulder" alt="About Us">About Us</a></li>
+            </ul>
+          </nav>
+
+          <div class="clear"></div>
+        </span><!-- end #menu -->
+      </div>
+    </header>
+
+    <section id="page">
+      <div id="page-container">
+        <div id="body-content">
+          <div class="content">
+            <div class="content-title">GDI Boulder Materials</div>
+
+            <div class="content-wrapper">
+              <div class="main">
+                <ul>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-intro-html-css" data-title="Introduction to HTML &amp; CSS">Introduction to HTML &amp; CSS</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-intermediate-htmlcss" data-title="Intermediate HTML &amp; CSS">Intermediate HTML &amp; CSS</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-intro-javascript" data-title="Introduction to Javascript">Introduction to Javascript</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-intro-programming-concepts" data-title="Introduction to Programming Concepts">Introduction to Programming Concepts</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-intro-bootstrap" data-title="Introduction to Bootstrap 3">Introduction to Bootstrap 3</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-advanced-css-techniques" data-title="Advanced CSS Tips &amp; Techniques">Advanced CSS Tips &amp; Techniques</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-css3-properties" data-title="CSS3 Properties &amp; Selectors">CSS3 Properties &amp; Selectors</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-boulder-servers-intro" data-title="Introduction to Servers">Introduction to Servers</a></li>
+                    <li class="module"><a data-href="http://gdiboulder.github.io/gdi-intro-python" data-title="Introduction to Python">Introduction to Python</a></li>
+                  </ul>
+              </div><!-- end .main -->
+
+              <div class="chapter-info">
+                <img alt="GDI Boulder Logo" src="/image/boulder-stamp.png">
+
+                <div class="chapter-socials">
+                  <div class="meetup">
+                    <a href="http://www.meetup.com/Girl-Develop-It-Boulder" alt="Boulder / Denver GDI Meetup" target="_blank">Join our meetup and take classes!</a>
+                  </div>
+
+                  <div class="email">
+                    <img alt="email icon" src="/image/email-icon.png">
+                    <a href="mailto:boulder@girldevelopit.com" alt="Boulder / Denver GDI Email" target="_blank">Contact Us!</a>
+                  </div>
+
+                  <div class="twitter">
+                    <img alt="twitter icon" src="/image/twitter.png">
+                    <a href="http://www.twitter.com/gdiboulder" alt="Boulder / Denver GDI on Twitter" target="_blank">Follow us on Twitter</a>
+                  </div>
+
+                  <div class="facebook">
+                    <img alt="facebook icon" src="/image/facebook.png">
+                    <a href="http://www.facebook.com/gdiboulder" alt="Boulder / Denver GDI on Facebook" target="_blank">Like us on Facebook</a>
+                  </div>
+                </div><!-- end .chapter-socials -->
+              </div><!-- end .chapter-info -->
+
+              <div class="clear"></div>
+
+              <div id="module-modal">
+                <iframe id="module-content" frameborder="0", marginwidth="0" marginheight="0" allowfullscreen></iframe>
+              </div>
+
+            </div><!-- end .content-wrapper -->
+          </div><!-- end .content -->
+
+          <script type="text/javascript">
+          $(function () {
+              var iframe = $("#module-content");
+              var overlay = $(".fade");
+              var dialog = $("#module-modal").dialog({
+                  autoOpen: false,
+                  modal: true,
+                  resizable: true,
+                  height: "auto",
+                  width: "quto",
+                  close: function () {
+                      iframe.attr("src", "");
+                      overlay.hide();
+                  }
+              });
+              $(".module a").on("click", function (e) {
+                  e.preventDefault();
+                  var src = $(this).attr("data-href");
+                  var title = $(this).attr("data-title");
+                  iframe.attr({
+                    src: src,
+                    height: $(window).innerHeight() * .85,
+                    width: $(window).innerWidth() * .85
+                  });
+                  overlay.show();
+                  dialog.dialog("option", "title", title).dialog("open");
+              });
+          });
+          </script>
+        </div><!-- end #body-content -->
+      </div><!-- end #page-containter -->
+    </section><!-- end #page -->
+
+    <div class="clear"></div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="about">
+          <a href="http://girldevelopit.com/codeofconduct">CODE OF CONDUCT</a>
+          <a href="http://girldevelopit.tumblr.com/" target="_blank">GIRL DEVELOP IT BLOG</a>
+        </div>
+      </div><!-- end .footer-container -->
+
+      <div class="media-container">
+        <div class="media-div">
+          As seen in...
+          <a href="http://lifehacker.com/5872682/learn-to-code-in-2012-with-free-weekly-programming-lessons-from-codecademy" target="_blank"><img alt="Lifehacker" class="media" src="/image/Lifehacker_Logo-grey.png"></a>
+          <a href="http://www.fastcompany.com/1776382/female-geeks-flex-their-skills-ladies-only-hackathon" target="_blank"><img alt="Fast Company" class="media" src="/image/fastcompany_logo-grey.png"></a>
+          <a href="http://blog.ted.com/2013/01/29/10-places-where-anyone-can-learn-to-code/" target="_blank"><img alt="TED" class="media" src="/image/ted_logo.png"></a>
+          <a href="http://www.youtube.com/watch?v=nKIu9yen5nc" target="_blank"><img alt="Code.org" class="media" src="/image/codeorg_logo.png"></a>
+          <a href="http://www.nytimes.com/2012/03/28/technology/for-an-edge-on-the-internet-computer-code-gains-a-following.html" target="_blank"><img alt="New York Times" class="media" src="/image/nyt_logo.gif"></a>
+        </div>
+      </div><!-- end .media-container -->
+    </footer>
+  </body>
+</html>

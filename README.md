@@ -36,7 +36,7 @@ This site is developed using the ECT javascript templating engine.  Here is what
 
 5. Edit your new ect file. The ect file replaces the body without modifying the header or footer. You do not need add `<body>` tags.
 
-**NOTE: There is also an `index-static.html` file that can be used in place of index.html and does not use ECT and is a straight html file**
+**NOTE: There is also an `index-static.html` file that can be used in place of index.html. It does not use ECT and is a straight html file.**
 
 Development Notes
 -----------------

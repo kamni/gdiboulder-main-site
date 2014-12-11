@@ -1,13 +1,6 @@
 <header>
-  <div class="top-bar"></div>
-
-  <ul class="socials">
-    <li><a href="<%= @twitterUrl %>" alt="<%= @orgName %> on Twitter" target="_blank"><img alt="Twitter" src="/image/twitter.png"></a></li>
-    <li><a href="<%= @facebookUrl %>" alt="<%= @orgName %> on  Facebook" target="_blank"><img alt="Facebook" src="/image/facebook.png"></a></li>
-  </ul>
-
-  <div class="header">
-    <a href="http://girldevelopit.com/"><img alt="Girl Develop It" id="logo" src="/image/pink-logo.png"></a>
+  <div class="header-container">
+    <a href="http://girldevelopit.com/"><img alt="Girl Develop It" class="logo" src="/image/gdi-logo.png"></a>
     <span id="menu" class="menu">
       <nav class="menu">
         <% if @navLinks?.length : %>

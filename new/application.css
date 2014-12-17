@@ -41,8 +41,8 @@ table {
  */
 @font-face {
   font-family:'FontAwesome';
-  src:url("/assets/fontawesome-webfont-fcac73a7a26b1b8fb471b160f963ada4.eot");
-  src:url("/assets/fontawesome-webfont-fcac73a7a26b1b8fb471b160f963ada4.eot?#iefix") format("embedded-opentype"),url("/assets/fontawesome-webfont-be1a53804eae1cbf7c4f307ceb13c3c3.woff") format("woff"),url("/assets/fontawesome-webfont-c00a3976c00698d9e42b954b2c69ab8d.ttf") format("truetype"),url("/assets/fontawesome-webfont-e200f993887700fec24e34cc29991736.svg#fontawesomeregular") format("svg");
+  src:url("/assets/fontawesome-webfont.eot");
+  src:url("/assets/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),url("/assets/fontawesome-webfont.woff") format("woff"),url("/assets/fontawesome-webfont.ttf") format("truetype"),url("/assets/fontawesome-webfont.svg#fontawesomeregular") format("svg");
   font-weight:normal;
   font-style:normal;
 }
@@ -1880,7 +1880,7 @@ footer .subtitle {
   padding-bottom:14px;
 }
 .chapter-aside .state-container-aside img {
-  width:100%;
+  width:80%;
   padding:0em 2em;
 }
 .chapter-aside hr {

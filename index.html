@@ -2,18 +2,29 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="Learn to Program, Software Development, Women Entrepreneurs, Technology Education, Women in Business, Web Development, Mobile Development, Women Programmers">
-    <meta name="description" content="Girl Develop It is an international organization, certified by the Board of Education, that exists to provide affordable and accessible programs to women who want to learn software development through mentorship and hands-on instruction.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="authenticity_token" name="csrf-param">
+    <meta content="Dck1QQkG5x/NADF/We4mjo1nNqTIiIXDWctdGyA21iY=" name="csrf-token">
 
     <!-- needed for all pages -->
+    <link href="/new/application.css" media="all" rel="stylesheet">
+    <script src="/new/application.js"></script>
+    <script src="/new/raphael-min.js"></script>
+    <script src="/new/jquery.js"></script>
+    <script src="/new/usa_states.js"></script>
+    <script src="/new/chapter_map.js"></script>
+    <script src="/new/main.js"></script>
     <script type="text/javascript" src="/script/coffee-script.js"></script>
     <script type="text/javascript" src="/script/ect.min.js"></script>
     <script type="text/javascript" src="/script/page/base.js"></script>
-    <link type="text/css" href="style/main.css" media="screen" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
     <!-- modify the following lines for other pages -->
     <title>GDI Boulder Materials</title>
     <script type="text/javascript" src="/script/page/index.js"></script>
+    <meta name="keywords" content="Learn to Program, Software Development, Women Entrepreneurs, Technology Education, Women in Business, Web Development, Mobile Development, Women Programmers">
+    <meta name="description" content="Learning materials for courses taught by Girl Develop It Boulder, an organization that exists to provide affordable and accessible programs to women who want to learn software development">
     <!-- end modification -->
 
     <script type="text/javascript">
@@ -25,8 +36,131 @@
 
   <body>
     <script type="text/javascript">
-      var html = renderer.render('base.ect', gdiMatIndex);
-      document.write(html)
+      document.write(renderer.render('includes/header.ect', gdiMatIndex));
+    </script>
+
+
+
+  <p class="notice"></p>
+  <p class="alert"></p>
+
+
+<section class="main-container">
+  <div class="container">
+    <aside class="chapter-aside">
+      <div class="state-container-aside">
+        <a href="http://girl-develop-it.herokuapp.com/chapters"><img alt="GDI Boulder" src="/image/boulder-stamp.png"></a>
+      </div>
+      <hr>
+      <h1>Boulder / Denver</h1>
+
+      <ul class="media-links media-links-rounded">
+    <a href="mailto:boulder@girldevelopit.com">
+      <i class="fa fa-envelope"></i>
+</a>
+    <a href="https://www.facebook.com/gdiboulder">
+      <i class="fa fa-facebook"></i>
+</a>
+    <a href="https://twitter.com/gdiboulder">
+      <i class="fa fa-twitter"></i>
+</a>
+
+</ul>
+
+
+      <p class="subtitle">- don't be shy -</p>
+      <a class="button" href="http://www.meetup.com/Girl-Develop-It-Boulder">{ Join Us }</a>
+
+      <!--
+        <div class="hide">
+          <div class="sponsors">
+            <h2>Sponsors</h2>
+            <div id="logos">
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+            </div>
+          </div>
+        </div>
+       -->
+    </aside>
+
+    <section id="content-section">
+
+      <script type="text/template" id="meetup">
+
+        <h3><a href=" <%= event_url %>"><%= name %></a></h3>
+        <p class="subtitle">[ <%=moment(time).format("dddd, MMMM Do YYYY, h:mm a")%>
+          <% if(typeof venue !== "undefined") { %>
+            , <a href=" http://maps.google.com/?q=<%= venue.address_1 %>, <%= venue.city %>, <%= venue.state %>"><%= venue.address_1 %>,<%= venue.city %>,<%= venue.state %></a>
+          <% } %>
+         ] </p>
+        <p><%= description.substring(0, 400) %><a href="<%= event_url %>">...read more</a></p>
+        <a href="<%= event_url %>" class="button">RSVP</a>
+        <p class="meetup-map hide">
+  <% if( typeof venue !== "undefined" && venue.lat !== 0) { %>
+    <img src= "http://maps.google.com/maps/api/staticmap?size=800x450&sensor=false&zoom=16&markers=<%= venue.lat %>%2C<%= venue.lon %>" alt="chapter map">
+  <% } %>
+</p>
+
+      </script>
+
+
+      <script type="text/javascript">
+        var meetup_url = '/meetups/boulder-denver.json';
+        $.getJSON(meetup_url).done(function (classesData){
+            console.log("here are all the classes", classesData);
+          if(classesData.length>0) {
+            var classesArr = classesData.slice(0,3);
+            console.log(classesArr);
+            var oneClass = '';
+            var classes = $('#meetup').html();
+              _.each(classesArr, function (one) {
+              oneClass += _.template(classes, one);
+                $(".classes").html(oneClass);
+            });
+          } else {
+            $(".classes").html("<p class=\"uhOh\">Sadly, no meetups are currently scheduled for this Chapter. <a href=\"http://meetup. com/Girl-Develop-It-Boulder\">Join our meetup group</a> to be notified when a new meetup is happening. Thanks for visiting us!</p>")};
+          });
+
+      </script>
+    </section>
+  </div>
+</section>
+
+
+
+<!-- load footer partial -->
+  <footer>
+  <div class="container">
+    <div class="footer">
+      <p class="subtitle hide">Don't see your city? Help bring Girl Develop It to your home town.</p>
+      <p class="subtitle">To become a sponsor or for partnership opportunities, email  us at <a href="mailto:sponsorships@girldevelopit.com">sponsorships@girldevelopit.com</a> </p>
+      <nav class="navigation">
+        <a href="http://girl-develop-it.herokuapp.com/about">about</a>
+        <a href="http://girl-develop-it.herokuapp.com/code-of-conduct">code of conduct</a>
+        <a href="http://girldevelopit.tumblr.com/">blog</a>
+      </nav>
+      <nav class="navigation">
+        <a href="https://twitter.com/girldevelopit"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/girldevelopit"><i class="fa fa-facebook"></i></a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+    <!-- ------- -->
+    <script type="text/javascript">
+      /*var html = renderer.render('base.ect', gdiMatIndex);
+      document.write(html)*/
     </script>
   </body>
 </html>

@@ -16,9 +16,8 @@ gdiBase = {
   ],
   contactAltPrefix: "Boulder / Denver GDI",
   contactInfo: [
-    { title: "Join our meetup and take classes!", url: meetupUrl, class: "meetup" },
-    { title: "Contact Us!", url: mailto, icon: "/image/email-icon.png", class: "email" },
-    { title: "Follow us on Twitter", url: twitterUrl, icon: "/image/twitter.png", class: "twitter" },
-    { title: "Like us on Facebook", url: facebookUrl, icon: "/image/facebook.png", class: "facebook" },
+    { title: "Contact Us!", url: mailto, iconClass: "fa-envelope" },
+    { title: "Follow us on Twitter", url: twitterUrl, iconClass: "fa-twitter" },
+    { title: "Like us on Facebook", url: facebookUrl, iconClass: "fa-facebook" },
   ]
 };

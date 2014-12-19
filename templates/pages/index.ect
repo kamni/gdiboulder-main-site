@@ -1,34 +1,36 @@
-<div class="content">
-  <div class="content-title"><%= @header %></div>
+    <section class="main-container">
+      <div class="container">
+        <aside class="chapter-aside">
+          <div class="state-container-aside">
+            <a href="<%= @chapterUrl %>"><img alt="GDI Boulder" src="/image/boulder-stamp.png"></a>
+          </div>
+          <hr>
+          <h1>Boulder / Denver</h1>
 
-  <div class="content-wrapper">
-    <div class="main">
-      <% if @modules?.length : %>
-      <ul>
-        <% for link in @modules : %>
-        <li class="module"><a href="<%- link.url %>" target="_blank"><%= link.title %></a></li>
-        <% end %>
-      </ul>
-      <% else : %>
-      <% end %>
-    </div>
+          <% if @contactInfo?.length : %>
+          <ul class="media-links media-links-rounded">
+            <% for link in @contactInfo : %>
+            <a href="<%- link.url %>" target="_blank" title="<%= link.title %>">
+              <i class="fa <%= link.iconClass %>"></i>
+            </a>
+            <% end %>
+          </ul>
+          <% end %>
 
-    <div class="chapter-info">
-      <img alt="GDI Boulder Logo" src="/image/boulder-stamp.png">
+          <p class="subtitle">- don't be shy -</p>
+          <a class="button" href="http://www.meetup.com/Girl-Develop-It-Boulder">{ Join Us }</a>
+        </aside>
 
-      <div class="chapter-socials">
-        <% if @contactInfo?.length : %>
-        <% for link in @contactInfo : %>
-        <div class="<%- link.class %>">
-          <% if link.icon? : %><img alt="<%= link.class %> icon" src="<%- link.icon %>"><% end %>
-          <a href="<%- link.url %>" target="_blank"><%= link.title %></a>
-        </div>
-        <% end %>
-        <% end %>
-      </div><!-- end .chapter-socials -->
-    </div><!-- end .chapter-info -->
+        <section id="content-section">
+          <% if @modules?.length : %>
+          <ul>
+            <% for link in @modules : %>
+            <li class="module"><a href="<%- link.url %>" target="_blank"><%= link.title %></a></li>
+            <% end %>
+          </ul>
+          <% else : %>
+          <% end %>
+        </section><!-- end content-section -->
 
-    <div class="clear"></div>
-
-  </div><!-- end .content-wrapper -->
-</div><!-- end .content -->
+      </div><!-- end container -->
+    </section><!-- end main-container -->

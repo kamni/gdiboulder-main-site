@@ -1,6 +1,7 @@
 gdiMatIndex = {
   header: "GDI Boulder Materials",
-  template: "pages/index.ect",
+  content: "pages/index.ect",
+  chapterUrl: "http://www.girldevelopit.com/chapters/boulder",
   modules: [
     { title: "Introduction Git & GitHub", url: "https://github.com/etmoore/gdi-git-workshop" },
     { title: "Introduction to HTML & CSS", url: "http://gdiboulder.github.io/gdi-boulder-intro-html-css" },

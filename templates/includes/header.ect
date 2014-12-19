@@ -11,8 +11,8 @@
       </ul>
       <% end %>
       <ul>
-        <li><a href="<%= @twitterUrl %>" alt="<%= @orgName %> on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="<%= @facebookUrl %>" alt="<%= @orgName %> on  Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><% include "includes/link.ect", { 'link': @contactInfo.twitter, 'title': @orgName + " on Twitter" } %></li>
+        <li><% include "includes/link.ect", { 'link': @contactInfo.facebook, 'title': @orgName + " on Facebook" } %></li>
       </ul>
     </nav>
 

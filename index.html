@@ -29,48 +29,16 @@
 
     <script type="text/javascript">
       renderer = ECT({ root : '/templates' });
-      var script = renderer.render('includes/script.ect', gdiMatIndex);
+      var script = renderer.render('includes/script.ect', gdiPage);
       document.write(script);
     </script>
   </head>
 
   <body>
     <script type="text/javascript">
-      document.write(renderer.render('includes/header.ect', gdiMatIndex));
-      document.write(renderer.render(gdiMatIndex['content'], gdiMatIndex));
-    </script>
-
-
-
-
-<!-- load footer partial -->
-  <footer>
-  <div class="container">
-    <div class="footer">
-      <p class="subtitle hide">Don't see your city? Help bring Girl Develop It to your home town.</p>
-      <p class="subtitle">To become a sponsor or for partnership opportunities, email  us at <a href="mailto:sponsorships@girldevelopit.com">sponsorships@girldevelopit.com</a> </p>
-      <nav class="navigation">
-        <a href="http://girl-develop-it.herokuapp.com/about">about</a>
-        <a href="http://girl-develop-it.herokuapp.com/code-of-conduct">code of conduct</a>
-        <a href="http://girldevelopit.tumblr.com/">blog</a>
-      </nav>
-      <nav class="navigation">
-        <a href="https://twitter.com/girldevelopit"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.facebook.com/girldevelopit"><i class="fa fa-facebook"></i></a>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
-
-    <!-- ------- -->
-    <script type="text/javascript">
-      /*var html = renderer.render('base.ect', gdiMatIndex);
-      document.write(html)*/
+      document.write(renderer.render('includes/header.ect', gdiPage));
+      document.write(renderer.render(gdiPage['content'], gdiPage));
+      document.write(renderer.render('includes/footer.ect', gdiPage));
     </script>
   </body>
 </html>

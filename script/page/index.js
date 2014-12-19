@@ -1,4 +1,4 @@
-gdiMatIndex = {
+gdiPage = {
   header: "GDI Boulder Materials",
   content: "pages/index.ect",
   chapterUrl: "http://www.girldevelopit.com/chapters/boulder",
@@ -18,7 +18,7 @@ gdiMatIndex = {
 };
 // bring in base variables, but don't override ones defined here
 for (var attrname in gdiBase) {
-  if (gdiMatIndex[attrname] === undefined) {
-    gdiMatIndex[attrname] = gdiBase[attrname];
+  if (gdiPage[attrname] === undefined) {
+    gdiPage[attrname] = gdiBase[attrname];
   }
 }

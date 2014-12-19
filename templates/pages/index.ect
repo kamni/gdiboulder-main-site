@@ -7,15 +7,11 @@
           <hr>
           <h1>Boulder / Denver</h1>
 
-          <% if @contactInfo?.length : %>
           <ul class="media-links media-links-rounded">
-            <% for link in @contactInfo : %>
-            <a href="<%- link.url %>" target="_blank" title="<%= link.title %>">
-              <i class="fa <%= link.iconClass %>"></i>
-            </a>
-            <% end %>
+            <% include 'includes/link.ect', { 'link': @contactInfo.email } %>
+            <% include 'includes/link.ect', { 'link': @contactInfo.twitter } %>
+            <% include 'includes/link.ect', { 'link': @contactInfo.facebook } %>
           </ul>
-          <% end %>
 
           <p class="subtitle">- don't be shy -</p>
           <a class="button" href="http://www.meetup.com/Girl-Develop-It-Boulder">{ Join Us }</a>

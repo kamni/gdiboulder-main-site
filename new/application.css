@@ -35,6 +35,18 @@ table {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
+.module-css {
+  color: #F95A61;
+}
+.module-programming {
+  color: #b78836;
+}
+.module-tools {
+  color: #2A4758;
+}
+.module a:hover {
+  font-weight: bold;
+}
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1553,6 +1565,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight:400;
   color:#282828;
   text-transform:uppercase;
+  margin-bottom: 1rem;
 }
 h1 {
   font-size:1.2rem;
@@ -1726,6 +1739,7 @@ footer {
   text-align:center;
   height:190px;
   background-color:#2a4758;
+  margin-top: 20px;
   padding:20px 0px 0px 0px;
 }
 @media screen and (max-width: 500px) {

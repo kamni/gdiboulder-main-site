@@ -18,10 +18,11 @@
         </aside>
 
         <section id="content-section">
+          <h1>GDI Class Materials</h1>
           <% if @modules?.length : %>
           <ul>
             <% for link in @modules : %>
-            <li class="module"><a href="<%- link.url %>" target="_blank"><%= link.title %></a></li>
+            <li class="module"><a class="<%= link.class %>" href="<%- link.url %>" target="_blank"><%= link.title %></a></li>
             <% end %>
           </ul>
           <% else : %>
